@@ -92,3 +92,64 @@ int main()
     return 0;
 }
 ```
+第三周
+--------
+利用*p來改變陣列裡的數值，p+2則是a[2]在往後數兩個
+```c
+#include <stdio.h>
+int a[5]={0,10,20,30,40};
+int main()
+{
+  for(int i=0;i<5;i++){
+    printf("%d\n",a[i]);
+  }
+  printf("\n");
+  int *p=&a[2];
+  *p=222;
+  for(int i=0;i<5;i++){
+    printf("%d\n",a[i]);
+  }
+  printf("\n");
+  p=p+2;
+  *p=666;
+  for(int i=0;i<5;i++){
+    printf("%d\n",a[i]);
+  }
+}
+利用void printAll()的函示庫來輸出
+p--則是將p+2的位置往前一位在改變裡面的數
+```c
+#include <stdio.h>
+int a[5]={0,10,20,30,40};
+void printAll()
+{
+  for(int i=0;i<5;i++){
+    printf("%d ",a[i]);
+  }
+  printf("\n");
+}
+int main()
+{
+  int *p=&a[2];
+  *p=222;
+  printAll();
+  
+  p=p+2;
+  *p=666;
+  printAll();
+  
+  p--;
+  *p=555;
+  printAll();
+}
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int a[10];
+int main()
+{
+  int b[10];
+  int *p=(int*)malloc(sizeof(int)*10);
+  return 0;
+}
