@@ -325,6 +325,7 @@ int main()
 ```
 課堂作業4-將原本改寫成字串指標
 ```c
+#include <stdio.h>
 #include <stdlib.h> //qsort()
 #include <string.h> //strcmp()
 char name[2000][80];
