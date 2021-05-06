@@ -271,3 +271,34 @@ int main()
 	printf("%.4f\n",100*ans/(float)N);
 }
 ```
+第十一周
+-----
+課堂作業1
+```c
+#include <stdio.h>
+unsigned char c;
+typedef unsigned char uchar;
+uchar d;
+int main()
+{
+    c='A';
+    d=c;
+    printf("%c",d);
+}
+```
+課堂作業2
+```c
+#include <stdio.h>
+typedef struct data
+{
+    char c;
+    int ans;
+}DATA;
+DATA listA;
+int main()
+{
+    listA.c='A';
+    listA.ans=1;
+    printf("%c %d\n",listA.c,listA.ans);
+}
+```
