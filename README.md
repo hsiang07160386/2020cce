@@ -307,7 +307,7 @@ int main()
 #include <stdio.h>
 #include <stdlib.h>
 int compare(const void*p1,const void*p2)
-{
+{///轉換成整數指標，準心看到的整數
     int d1 = *((int*)p1);
     int d2 = *((int*)p2);
     if(d1>d2) return 1;
