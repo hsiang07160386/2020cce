@@ -442,3 +442,26 @@ int main()
 	}
 }
 ```
+課堂作業3 CPE299火車
+```c
+#include <stdio.h>
+int a[100];
+int main()
+{
+	int T;
+	scanf("%d",&T);//有幾筆Input
+	for(int t=0;t<T;t++){
+		int N;//Input
+		scanf("%d",&N);
+		for(int i=0;i<N;i++){
+			scanf("%d",&a[i]);
+		}
+		int ans=0;
+		printf("Optimal train swapping takes %d swaps.\n",ans);
+	}
+}
+```
+課堂作業4 CPE299火車-完整版
+```c
+
+```
