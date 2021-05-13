@@ -425,7 +425,7 @@ int main()
 					ascii[i]=ascii[j];
 					ascii[j]=c;
 				}
-				if(ans[i]==ans[j]&&ascii[i]<ascii[j]){///兩個相同的時候
+				if(ans[i]==ans[j]&&ascii[i]<ascii[j]){///兩個頻率相同的時候
 					int temp=ans[i];
 					ans[i]=ans[j];
 					ans[j]=temp;
