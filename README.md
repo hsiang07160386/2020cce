@@ -553,3 +553,19 @@ void mousePressed(){//按一下，a加一
   a++;
 }
 ```
+Step4-文字全系列
+```c
+void setup(){
+  size(1024,400);//畫面
+}
+void draw(){//互動，每秒60次
+  if(mousePressed) background(202,100,157);//按下滑鼠，變色
+  else background(165,124,230);
+  textSize(100);//文字大小
+  text("Now a is:"+a,212,200);//秀文字，後兩位是文字的位子
+}
+int a=0;
+void mousePressed(){//按一下，a加一
+  a++;
+}
+```
