@@ -521,3 +521,35 @@ int main()
 	}
 }
 ```
+第十三周
+--------
+Step1-練習用P語言
+```c
+size(1024,400);//畫面
+background(165,124,230);//背景
+```
+Step2-用滑鼠互動
+```c
+void setup(){
+  size(1024,400);//畫面
+}
+void draw(){//互動，每秒60次
+  if(mousePressed) background(202,100,157);//按下滑鼠，變色
+  else background(165,124,230);
+}
+```
+Step3-用滑鼠互動，加秀文字
+```c
+void setup(){
+  size(1024,400);//畫面
+}
+void draw(){//互動，每秒60次
+  if(mousePressed) background(202,100,157);//按下滑鼠，變色
+  else background(165,124,230);
+  text(a,520,200);//秀文字，後兩位是文字的位子
+}
+int a=0;
+void mousePressed(){//按一下，a加一
+  a++;
+}
+```
