@@ -569,3 +569,19 @@ void mousePressed(){//按一下，a加一
   a++;
 }
 ```
+Step5-時鐘
+```c
+void setup(){
+  size(1024,400);//畫面
+}
+void draw(){//每秒跑60次，會隨時更新資料
+  background(#FCFC52);
+  int s = second();//Values from 0-59
+  int m = minute();//Values from 0-59
+  int h = hour();//Values from 0-23
+  textSize(80);
+  text(h +":"+ m +":"+ s,300,200);
+   //數字+字串
+   //h,m,s是數字，":"是字串
+}
+```
