@@ -585,3 +585,49 @@ void draw(){//每秒跑60次，會隨時更新資料
    //h,m,s是數字，":"是字串
 }
 ```
+Step6-倒數
+```c
+void setup(){
+  size(1024,400);//畫面
+  textFont(createFont("標楷體",80));//印中文
+}
+void draw(){
+  background(#FCFC52);
+  int s = second();//Values from 0-59
+  int m = minute();//Values from 0-59
+  int h = hour();//Values from 0-23
+  textSize(80);
+  text(h +":"+ m +":"+ s,300,200);
+   //數字+字串
+   //h,m,s是數字，":"是字串
+   int total = s+60*m+60*60*h;//總秒數
+   int closeH=17,closeM=40,closeS=0;//下課時間
+   int total2=closeS+60*closeM+60*60*closeH;//目標總秒數
+   int ans=total2-total;
+   text("剩下幾秒:"+ans,100,100);
+}
+```
+Step7-倒數，換單位
+```c
+void setup(){
+  size(1024,400);//畫面
+  textFont(createFont("標楷體",80));
+}
+void draw(){
+  background(#FCFC52);
+  int s = second();//Values from 0-59
+  int m = minute();//Values from 0-59
+  int h = hour();//Values from 0-23
+  textSize(80);
+  text(h +":"+ m +":"+ s,100,200);
+   //數字+字串
+   //h,m,s是數字，":"是字串
+   int total = s+60*m+60*60*h;//總秒數
+   int closeH=17,closeM=40,closeS=0;//下課時間
+   int total2=closeS+60*closeM+60*60*closeH;//目標總秒數
+   int ans=total2-total;
+   text("剩下幾秒:"+ans,100,100);
+   int ansH=ans/60/60%60,ansM=ans/60%60,ansS=ans%60;//換算單位
+   text(ansH+":"+ansM+":"+ansS,100,300);
+}
+```
