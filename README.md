@@ -644,4 +644,18 @@ void draw(){//畫圖，每秒更新60次
   
 }
 ```
-課堂作業2
+課堂作業2-點擊畫面，隨機出現數字
+```c
+int ans=0;
+void setup(){//設定，只做一次
+  size(200,200);
+  textSize(30);
+}
+void draw(){//畫圖，每秒更新60次
+  background(#BF49F2);
+  text(ans,20,40);//畫出ans
+}
+void mousePressed(){
+  ans=(int)random(60);//浮點數不能變成整數，要加(int)
+}
+```
