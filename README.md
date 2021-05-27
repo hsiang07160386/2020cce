@@ -690,3 +690,99 @@ void mousePressed(){
   a[i2]=temp;
 }
 ```
+延伸-若要抽更多次簽
+```c
+void mousePressed(){
+  for(int i=0;i<100;i++){//用for迴圈，多抽幾次
+    i1=(int)random(10);
+    i2=(int)random(10);
+    int temp=a[i1];
+    a[i1]=a[i2];
+    a[i2]=temp;
+  }
+}
+```
+課堂作業4-大樂透抽球(作弊版)
+```c
+int []a=new int[47];//Java的陣列
+void setup(){
+  size(500,200);
+  textSize(30);
+  for(int i=0;i<47;i++){//先排好順序
+    a[i]=i;
+  }
+  for(int i=0;i<1000;i++){//開始洗牌
+    int i1=(int)random(47);
+    int i2=(int)random(47);
+    int temp=a[i1];
+    a[i1]=a[i2];
+    a[i2]=temp;
+  }
+}
+void draw(){
+  background(#FF0011);
+  for(int i=0;i<5;i++){
+    text(a[i],i*80,100);
+  }
+}
+```
+課堂作業5-大樂透(完整版)
+```c
+int []a=new int[47];
+void setup(){
+  size(500,200);
+  textSize(30);
+  for(int i=0;i<47;i++){
+    a[i]=i;
+  }
+  for(int i=0;i<1000;i++){
+    int i1=(int)random(47);
+    int i2=(int)random(47);
+    int temp=a[i1];
+    a[i1]=a[i2];
+    a[i2]=temp;
+  }
+}
+int N=0;
+void draw(){
+  background(#FF0011);
+  for(int i=0;i<N;i++){
+    text(a[i],i*80,100);
+  }
+}
+void mousePressed(){//利用滑鼠互動，讓數字一個一個出現
+  N++;
+}
+```
+課堂作業6-大樂透(加強版)
+```c
+int []a=new int[47];
+void setup(){
+  size(500,200);
+  textSize(30);
+  for(int i=0;i<47;i++){
+    a[i]=i;
+  }
+  for(int i=0;i<1000;i++){
+    int i1=(int)random(47);
+    int i2=(int)random(47);
+    int temp=a[i1];
+    a[i1]=a[i2];
+    a[i2]=temp;
+  }
+}
+int N=0;
+void draw(){
+  background(#FF0011);
+  textAlign(CENTER,CENTER);
+  for(int i=0;i<N;i++){
+    fill(255); //填顏色
+    ellipse(i*80+40,100,55,55);//畫球，使他等距
+    fill(0); //填顏色
+    text(a[i],i*80+40,100);//數字，使他等距
+  }
+}
+void mousePressed(){//利用滑鼠互動，讓數字一個一個出現
+  N++;
+}
+```
