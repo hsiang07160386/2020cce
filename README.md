@@ -631,3 +631,17 @@ void draw(){
    text(ansH+":"+ansM+":"+ansS,100,300);
 }
 ```
+第十四周
+-----
+課堂作業1
+*random=隨機亂數
+```c
+void setup(){//設定，只做一次
+  float ans=random(60);//設定亂數，小於60的浮點數
+  text(ans,20,20);//畫出ans
+}
+void draw(){//畫圖，每秒更新60次
+  
+}
+```
+課堂作業2
