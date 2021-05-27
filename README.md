@@ -664,3 +664,29 @@ void mousePressed(){
   ans=(int)random(60);//浮點數不能變成整數，要加(int)
 }
 ```
+課堂作業3-洗牌一次
+
+將亂數1亂數2交換，重複做很多次
+```c
+int []a={1,2,3,4,5,6,7,8,9,10};
+int i1,i2;
+void setup(){
+  size(400,100);
+  textSize(30);
+}
+void draw(){
+  background(#BF49F2);
+  for(int i=0;i<10;i++){
+    text(a[i],i*40,50);
+  }
+  rect(i1*40,50,30,30);
+  rect(i2*40,50,30,30);
+}
+void mousePressed(){
+  i1=(int)random(10);
+  i2=(int)random(10);
+  int temp=a[i1];//交換
+  a[i1]=a[i2];
+  a[i2]=temp;
+}
+```
