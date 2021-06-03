@@ -826,3 +826,41 @@ void mousePressed(){
   player.play();
 }
 ```
+課堂作業2-2
+上課鐘聲:滑鼠控制撥放暫停
+```c
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  player=new SoundFile(this,"bell.mp3");
+}
+void draw(){
+  background(#DB2CFF);
+}
+void mousePressed(){
+  if(player.isPlaying()){
+    player.stop();//按一下暫停
+  }else{
+    player.play();
+  }
+}
+```
+課堂作業3-每10秒，撥一次
+```c
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  textSize(40);
+  player=new SoundFile(this,"tada.mp3");
+}
+void draw(){
+  int s=second();
+  background(#DB2CFF);
+  text(10-s%11,100,100);
+  if(10-s%11==0&&!player.isPlaying()){
+    player.play();//如果有再撥，不要搶
+  }
+}
+```
