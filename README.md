@@ -786,3 +786,43 @@ void mousePressed(){//利用滑鼠互動，讓數字一個一個出現
   N++;
 }
 ```
+第十五周
+------
+課堂作業1-用奇偶數調背景
+```c
+void setup(){
+  size(400,200);
+}
+void draw(){
+  int s=second();
+  if(s%2==0) background(#FF0F94);
+  else background(#DB2CFF);
+}
+```
+課堂作業1-2
+```c
+void setup(){
+  size(400,200);
+  textSize(40);
+}
+void draw(){
+  int s=second();
+  background(#FF0F94);
+  text(10-s%11,100,100);//0-10有11個數
+}
+```
+課堂作業2-音效
+```c
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  player=new SoundFile(this,"tada.mp3");//要拉音檔進來
+}
+void draw(){
+  background(#DB2CFF);
+}
+void mousePressed(){
+  player.play();
+}
+```
