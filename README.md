@@ -864,3 +864,48 @@ void draw(){
   }
 }
 ```
+第十六周
+-----
+課堂作業1-畫橢圓
+```c
+void setup(){
+  size(400,200);
+}
+void draw(){
+  background(#E60AFF);
+  ellipse(100,100,80,100);
+  //      圓心    寬  高 
+}
+```
+課堂作業2-畫圓弧
+```c
+void setup(){
+  size(400,200);
+}
+void draw(){
+  background(#E60AFF);
+  fill(255);   
+  ellipse(100,100,100,100);
+  fill(0,255,0);
+  float stop=mouseX/50.0;
+  text(stop,200,100);//顯示X軸的值
+  arc(100,100,100,100,0,stop);
+  //  圓心    寬   高 開始，結束
+}
+```
+課堂作業3-圓弧轉動
+```c
+void setup(){
+  size(400,200);
+}
+void draw(){
+  background(#E60AFF);
+  fill(255);   
+  ellipse(100,100,100,100);
+  fill(0,255,0);
+  float start=mouseX/100.0;
+  textSize(30);
+  text(start,200,200);
+  arc(100,100,100,100,0+start,0.1+start);
+}
+```
