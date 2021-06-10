@@ -908,4 +908,91 @@ void draw(){
   text(start,200,200);
   arc(100,100,100,100,0+start,0.1+start);
 }
+``
+課堂作業4-大轉輪
+```c
+void setup(){
+  size(400,200);
+}
+void draw(){
+  background(#E60AFF);
+  fill(255);   
+  ellipse(100,100,180,180);
+  fill(0,255,0);
+  float start=mouseX/50.0;
+  for(int i=0;i<24;i++){
+    float shift=2*PI*i/24.0;
+    if(i%3==0) fill(0);
+    if(i%3==1) fill(#FC0509);
+    if(i%3==2) fill(#FFF815);
+    arc(100,100,180,180,shift+0+start,shift+PI/12+start);
+  }
+}
+```
+課堂作業5
+```c
+void setup(){
+  size(400,200);
+}
+void draw(){
+  background(255);
+  fill(255);   
+  ellipse(100,100,180,180);
+  fill(0,255,0);
+  float start=mouseX/50.0;
+  for(int i=0;i<24;i++){
+    float shift=2*PI*i/24.0;
+    if(i%3==0) fill(#7B22A2);
+    if(i%3==1) fill(#FF08A5);
+    if(i%3==2) fill(#0D67FF);
+    if(i==0) fill(#FF9203);
+    arc(100,100,180,180,shift+0+start,shift+PI/12+start);
+  }
+}
+```
+課堂作業6-轉轉轉
+```c
+void setup(){
+  size(400,200);
+}
+float start=0;
+void draw(){
+  background(255);
+  if(start<10) start+=0.01;
+  fill(0);
+  text(start,200,150);
+  for(int i=0;i<24;i++){
+    float shift=i*PI/12;
+    if(i%3==0) fill(#7B22A2);
+    if(i%3==1) fill(#FF08A5);
+    if(i%3==2) fill(#0D67FF);
+    if(i==0) fill(#FF9203);
+    arc(100,100,180,180,shift+0+start,shift+PI/12+start);
+  }
+}
+```
+課堂作業7-轉盤從快到慢
+```c
+void setup(){
+  size(400,200);
+}
+float start=0,v=0.07;
+void draw(){
+  background(255);
+  if(v>0.001) {
+    start+=v;
+    v*=0.99;
+  }
+  fill(0);
+  text(start,200,150);
+  text(v,200,180);
+  for(int i=0;i<24;i++){
+    float shift=i*PI/12;
+    if(i%3==0) fill(#7B22A2);
+    if(i%3==1) fill(#FF08A5);
+    if(i%3==2) fill(#0D67FF);
+    if(i==0) fill(#FF9203);
+    arc(100,100,180,180,shift+0+start,shift+PI/12+start);
+  }
+}
 ```
