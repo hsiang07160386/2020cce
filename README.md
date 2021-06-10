@@ -996,3 +996,31 @@ void draw(){
   }
 }
 ```
+課堂作業8
+```c
+void setup(){
+  size(400,200);
+}
+float start=0,v;
+void mousePressed(){
+  v=random(1);
+}
+void draw(){
+  background(255);
+  if(v>0.001) {
+    start+=v;
+    v*=0.99;
+  }
+  fill(0);
+  text(start,200,150);
+  text(v,200,180);
+  for(int i=0;i<24;i++){
+    float shift=i*PI/12;
+    if(i%3==0) fill(#7B22A2);
+    if(i%3==1) fill(#FF08A5);
+    if(i%3==2) fill(#0D67FF);
+    if(i==0) fill(#FF9203);
+    arc(100,100,180,180,shift+0+start,shift+PI/12+start);
+  }
+}
+```
