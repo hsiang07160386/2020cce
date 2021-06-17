@@ -1024,3 +1024,111 @@ void draw(){
   }
 }
 ```
+第十七周
+-----
+課堂作業1
+```c
+void setup(){
+ size(400,200);
+ textSize(40);
+}
+String line="hello";
+void draw(){
+  background(#ED00FA);
+  text(line,100,100);
+  text("World",100,150);
+}
+```
+課堂作業2-使用key，了解字串
+```c
+void setup(){
+ size(400,200);
+ textSize(40);
+}
+String line="hello";
+char c='9';
+void draw(){
+  background(#ED00FA);
+  text(line+c+100,100,100);
+  text("World:"+key,100,150);
+}
+```
+課堂作業3
+```c
+void setup(){
+ size(400,200);
+ textSize(40);
+}
+char c='9';
+int win=0;
+void draw(){
+  background(#ED00FA);
+  text("Press:"+c,100,100);
+  text("You :"+key,100,150);
+  if(c==key) win=1;
+  else win=0;  
+}
+```
+課堂作業4
+```C
+void setup(){
+ size(400,200);
+ textSize(40);
+}
+char c='9';
+String ans="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int win=0;
+void draw(){
+  background(#ED00FA);
+  text("Press:"+c,100,100);
+  text("You :"+key,100,150);
+  if(c==key) win=1;
+  else win=0;
+  
+  if(win==1){
+    text("You Win!",100,50);
+    int i=int(random(26+26));
+    c=ans.charAt(i);
+  } 
+}
+```
+課堂作業5
+```c
+void setup(){
+  size(400,200);
+  textSize(40);
+}
+int x=100,y=100;
+void draw(){
+  background(#ED00FA);
+  rect(x,y,50,50);///畫方塊
+}
+void keyPressed(){
+  if(keyCode==LEFT) x-=10;
+  if(keyCode==RIGHT) x+=10;
+}
+```
+課堂作業6
+```c
+void setup(){
+  size(400,200);
+  textSize(40);
+}
+int x=100,y=100,vx=0,vy=0;
+void draw(){
+  background(#ED00FA);
+  rect(x,y,50,50);
+  x+=vx;
+}
+void keyPressed(){
+  if(keyCode==LEFT) vx=-1;//往左
+  if(keyCode==RIGHT) vx=+1;//往右
+}
+void keyReleased(){
+  vx=0;//不動
+}
+```
+課堂作業7
+```c
+
+```
