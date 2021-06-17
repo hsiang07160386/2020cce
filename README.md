@@ -1118,7 +1118,7 @@ int x=100,y=100,vx=0,vy=0;
 void draw(){
   background(#ED00FA);
   rect(x,y,50,50);
-  x+=vx;
+  x+=vx;//每秒60次，等速移動
 }
 void keyPressed(){
   if(keyCode==LEFT) vx=-1;//往左
@@ -1130,5 +1130,39 @@ void keyReleased(){
 ```
 課堂作業7
 ```c
-
+String A="mother";
+String line="";
+void setup(){
+  size(400,300);
+  textSize(40);
+}
+void draw(){
+  background(0);
+  text(A,100,100);
+  text(line+"|",100,150);
+}
+void keyPressed(){
+  line=line+key;
+}
+```
+課堂作業8-打字遊戲
+```c
+String A="mother";
+String line="";
+void setup(){
+  size(400,300);
+  textSize(40);
+}
+void draw(){
+  background(0);
+  text(A,100,100);
+  text(line+"|",100,150);
+}
+void keyPressed(){
+  int len=line.length();
+  if(key>='a'&&key<='z') line=line+key;
+  if(key>='A'&&key<='Z') line=line+key;
+  if(key==ENTER){  }
+  if(key==BACKSPACE&&len>0) line=line.substring(0,len-1);//怕一直刪會壞掉，所以len要大於0
+}
 ```
